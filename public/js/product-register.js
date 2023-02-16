@@ -125,7 +125,7 @@
         } else if (content > maxLength){
             noValidateMsg = `La marca no puede tener más de ${maxLength} caracteres`;
         } else {
-            const toyBrandRegExp = new RegExp(/^[A-ZÁÉÍÓÚÑÜ][a-záéíóúñü0-9®| -]*$/);
+            const toyBrandRegExp = new RegExp(`^[A-ZÁÉÍÓÚÑÜ][a-zA-ZáéíóúñüZÁÉÍÓÚÑÜ0-9|\.\&'’® -]{${minLength - 1},${maxLength - 1}}$`);
             if (!toyBrandRegExp.test(inputValue)){
                 noValidateMsg = `El nombre de la marca debe estar escrito con la primera letra en Mayúscula`;
             }
