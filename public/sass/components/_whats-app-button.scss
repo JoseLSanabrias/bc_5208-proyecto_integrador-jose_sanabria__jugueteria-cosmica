@@ -1,0 +1,28 @@
+
+.whats-app-button{
+    &__link{
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background-image: url(../images/whatsapp-icon.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #00d95f;
+        box-shadow: 2px 2px 6px -2px hsla(0, 0%, 0%, .3);
+        position: fixed;
+        right: 5%;
+        bottom: 3%;
+        z-index: 4;
+        transition: background-color .2s, opacity .4s;
+        opacity: 0;
+        
+        &:active{
+            background-color: #00662c;
+        }
+
+        @media only screen and (min-width: 0) and (max-width: 768px){
+            opacity: 1;
+
+        }
+    }
+}

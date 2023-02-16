@@ -1,0 +1,116 @@
+<div class="contact__wrapper">
+    <div class="contact__wrapper-bg"></div>
+
+    <div class="main__current-page-container">
+    
+        <div class="current-page__icon-container">
+            <img class="current-page__icon" src="./public/images/contact-icon--wh.svg" alt="Imagen vectorizada de un sobre despegando">
+        </div>
+    
+        <div class="current-page__heading-wrapper">
+            <h2 class="current-page__heading">Contacto</h2>
+        </div>
+    
+    </div>
+    
+    <div class="main__whats-app-button-container">
+        <a class="whats-app-button__link" href="http://wa.me/+573332224444"  target="_blank"></a>
+    </div>
+
+    <section class="section-contact-form">
+        
+        <div class="contact-form-container">
+
+            <header class="contact-form__header">
+                <div class="contact-form__img-container">
+                    <img class="contact-form__header-img" src="./public/images/miles-morales__hotkenobi.png" alt="Fotografía de figura de acción de Spider-Man Miles Morales tocando la guitarra en el aire">
+                    <p class="contact-form__img-disclaimer">foto de @hot.kenobi </p>
+                </div>
+
+                <div class="contact-form__header-content">
+                    <h1 class="contact-form__heading">¡Hablemos!</h1>
+
+                    <div class="contact-form__info-container">
+                        <a class="contact-form__contact-mail" href="mailto:contacto.info@cosmicastr.com?subject=Contacto">contacto.info@cosmicastr.com</a>
+                        <p class="contact-form__contact-info">(+57) 312 3457890</p>
+                    </div>
+
+                </div>
+            </header>
+
+            <form class="contact-form" action="alta.html" method="post" autocomplete="off">
+
+                <div class="contact-form__input-wrapper">
+                    <label class="contact-form__label" for="contact-form-name-input"><sup>*</sup>¿Cuál es tu nombre?:</label>
+                    <input class="contact-form__input" type="text" id="contact-form-name-input" name="customer-name" placeholder="Ej: Cliente Nuevo" autofocus>
+                    <div class="contact-form__custom-validity-wrapper"></div>
+                </div>
+
+                <div class="contact-form__input-wrapper">
+                    <label class="contact-form__label" for="contact-form-email-input"><sup>*</sup>¿Cuál es tu correo?:</label>
+                    <input class="contact-form__input" type="email" id="contact-form-email-input" name="customer-email" placeholder="Ej: cliente@mail.com">
+                    <div class="contact-form__custom-validity-wrapper"></div>
+                </div>
+
+                <div class="contact-form__input-wrapper">
+                    <label class="contact-form__label" for="contact-form-phone-input">¿Cuál es tu número de contacto?:</label>
+                    <input class="contact-form__input" type="tel" id="contact-form-phone-input" name="customer-email" placeholder="Ej: (+57)123 456 7890">
+                    <div class="contact-form__custom-validity-wrapper"></div>
+                </div>
+
+                <div class="contact-form__input-wrapper">
+                    <label class="contact-form__label" for="contact-form-city-input"><sup>*</sup>¿De dónde nos contactas?:</label>
+                    <select class="contact-form__input" id="contact-form-city-input" name="customer-location" size="4">
+                        <option class="contact-form__option" value="" selected>—Seleccionar—</option>
+                    </select>
+                    <div class="contact-form__custom-validity-wrapper"></div>
+                </div>
+
+                <div class="contact-form__input-wrapper">
+                    <label class="contact-form__label" for="contact-form-address-input">¿Cuál es tu dirección?:</label>
+                    <input class="contact-form__input" type="tel" id="contact-form-address-input" name="customer-address" placeholder="Ej: Calle 00 # 00 - 00">
+                    <div class="contact-form__custom-validity-wrapper"></div>
+                </div>
+
+                <div class="contact-form__input-wrapper">
+                    <label class="contact-form__label" for="contact-form-zip-code-input">¿Cómo es tu código postal?:</label>
+                    <input class="contact-form__input" type="tel" id="contact-form-zip-code-input" name="customer-zip-code" placeholder="Ej: 112233">
+                    <div class="contact-form__custom-validity-wrapper"></div>
+                </div>
+
+                <div class="contact-form__input-wrapper">
+                    <label class="contact-form__label" for="contact-form-pqr-input"><sup>*</sup>¿Cuál es el motivo de contacto?:</label>
+                    <div class="contact-form__option-list-container">
+                        <select class="contact-form__select contact-form__select--dropdown" id="contact-form-pqr-input" name="customer-pqr">
+                            <option class="contact-form__option contact-form__option--dropdown" value="" selected>—Seleccionar—</option>
+                            <option class="contact-form__option contact-form__option--dropdown" value="1">Estado del envío</option>
+                            <option class="contact-form__option contact-form__option--dropdown" value="2">Cambio/reembolso</option>
+                            <option class="contact-form__option contact-form__option--dropdown" value="3">Inconveniente con el producto</option>
+                        </select>
+                    </div>
+                    <div class="contact-form__custom-validity-wrapper"></div>
+                </div>
+
+                <div class="contact-form__input-wrapper">
+                    <label class="contact-form__label" for="contact-form-order-id-input">¿Tienes número de orden?:</label>
+                    <input class="contact-form__input" type="tel" id="contact-form-order-id-input" name="customer-order-id" placeholder="Ej: 0123456789-123">
+                    <div class="contact-form__custom-validity-wrapper"></div>
+                </div>
+
+                <div class="contact-form__input-wrapper contact-form__input-wrapper--textarea">
+                    <label class="contact-form__label" for="contact-form-additional-info">¿Hay algo adicional en qué podamos ayudar?</label>
+                    <textarea class="contact-form__textarea" id="contact-form-additional-info" name="additional-info" placeholder="Cuéntanos un poco más (máx. 300 caracteres)" maxlength="300"></textarea>
+                    <div class="contact-form__custom-validity-wrapper"></div>
+                </div>
+
+                <p class="contact-form__disclaimer"><sup>*</sup>Campos obligatorios</p>
+
+                <div class="contact-form-submit-btn__container">
+                    <button class="contact-form-submit-btn" type="submit" id="contact-form-submit-button">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
+
+<script src="../../public/js/contact.js"></script>

@@ -1,0 +1,52 @@
+
+.hamburger-button {
+    width: 2rem;
+    height: 1.5rem;
+    margin: 1rem;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+
+    &__top-bread,
+    &__meat,
+    &__bottom-bread {
+        width: 100%;
+        height: .15rem;
+        border-radius: 10px;
+        background-color: #fff;
+        display: block;
+    }
+
+    &__top-bread{
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    &__meat {
+        transition: transform 0.2s ease-in-out;
+    }
+
+    &__bottom-bread{
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+    
+}
+
+.main-nav-toggle:checked ~ .main-header .main-nav {
+    transform: translateX(0);
+}
+
+.main-nav-toggle:checked ~ .main-header .hamburger-button__top-bread {
+    transform: rotate(45deg);
+}
+
+.main-nav-toggle:checked ~ .main-header .hamburger-button__meat {
+    transform: scaleY(0);
+}
+
+.main-nav-toggle:checked ~ .main-header .hamburger-button__bottom-bread {
+    transform: rotate(-45deg);
+}

@@ -1,0 +1,140 @@
+
+<div class="register-wrapper">
+
+    <div class="main__current-page-container">
+
+        <div class="current-page__icon-container">
+            <img class="current-page__icon" src="../public/images/register-icon--wh.svg" alt="Imagen vectorizada de un hoja de registro">
+        </div>
+
+        <div class="current-page__heading-wrapper">
+            <h2 class="current-page__heading">Alta</h2>
+        </div>
+
+    </div>
+
+    <div class="main__whats-app-button-container">
+        <a class="whats-app-button__link" href="http://wa.me/+573332224444"  target="_blank"></a>
+    </div>
+
+    <section class="section-register-form">
+
+        <div class="section-register-form__bg-image"></div>
+
+        <div class="register-form-container">
+
+            <header class="register-form__header">
+                <div class="register-form__header-image-container">
+                    <img class="register-form__header-image" src="../public/images/register-form__header-image.jpg" alt="Fotografía de estantes de juguetería">
+                </div>
+            </header>
+
+            <form class="register-form" action="/product-register/new" method="post" enctype="multipart/form-data" autocomplete="off">
+
+                <div class="register-form__heading-container">
+                    <h2 class="register-form__heading">Registrar Producto</h2>
+                </div>
+
+                <div class="register-form__input-wrapper">
+                    <label class="register-form__label" for="register-form-name-input"><sup>*</sup>Nombre:</label>
+                    <input autofocus class="register-form__input" type="text" id="register-form-name-input" name="title" placeholder="Nuevo juguete">
+                    <div class="register-form__custom-validity-wrapper"></div>
+                </div>
+
+                <div class="register-form__input-wrapper">
+                    <label class="register-form__label" for="register-form-price-input"><sup>*</sup>Precio:</label>
+                    <input class="register-form__input register-form__input--price" type="text" id="register-form-price-input" name="fee" placeholder="$ 0,000,000 COP">
+                    <div class="register-form__custom-validity-wrapper"></div>
+                </div>
+
+                <div class="register-form__input-wrapper">
+                    <label class="register-form__label" for="register-form-stock-input"><sup>*</sup>Stock:</label>
+                    <input class="register-form__input" type="text" id="register-form-stock-input" name="stock" placeholder="Unidades disponibles">
+                    <div class="register-form__custom-validity-wrapper"></div>
+                </div>
+
+                <div class="register-form__input-wrapper">
+                    <label class="register-form__label" for="register-form-brand-input"><sup>*</sup>Marca:</label>
+                    <input class="register-form__input" type="text" id="register-form-brand-input" name="brand" placeholder="Marca del juguete">
+                    <div class="register-form__custom-validity-wrapper"></div>
+                </div>
+
+                <div class="register-form__input-wrapper">
+                    <label class="register-form__label" for="register-form-category-input"><sup>*</sup>Categoría:</label>
+                    <select class="register-form__select register-form__select--multiple" id="register-form-category-input" name="category" size="3" multiple>
+                        <option class="register-form__option" value="" selected>—Seleccionar—</option>
+                        <option class="register-form__option" value="1">Bebés y Pre-escolar</option>
+                        <option class="register-form__option" value="2">Coleccionables</option>
+                        <option class="register-form__option" value="3">Figuras de acción</option>
+                        <option class="register-form__option" value="4">Muñecas</option>
+                        <option class="register-form__option" value="5">Sets de bloques y construcción</option>
+                    </select>
+                    <div class="register-form__custom-validity-wrapper"></div>
+                </div>
+
+                <div class="register-form__input-wrapper">
+                    <label class="register-form__label" for="register-form-short-description"><sup>*</sup>Descripción corta:</label>
+                    <textarea class="register-form__textarea register-form__textarea--short" id="register-form-short-description" name="short-description" placeholder="Max. 65 caracteres"></textarea>
+                    <div class="register-form__custom-validity-wrapper"></div>
+                </div>
+
+                <div class="register-form__input-wrapper register-form__input-wrapper--textarea-long">
+                    <label class="register-form__label" for="register-form-long-description"><sup>*</sup>Descripción larga:</label>
+                    <textarea class="register-form__textarea register-form__textarea--long" id="register-form-long-description" name="long-description" placeholder="Max. 290 caracteres"></textarea>
+                    <div class="register-form__custom-validity-wrapper"></div>
+                </div>
+
+                <fieldset class="register-form__fieldset">
+                    <legend class="register-form__legend">Envío sin cargo:</legend>
+                    
+                    <label class="register-form__label register-form__label--fieldset" for="register-form-free-shipping">
+                        Si:
+                        <input class="register-form__checkbox" type="radio" id="register-form-free-shipping" value="yes" name="freeShipment">
+                    </label>
+
+                    <label class="register-form__label register-form__label--fieldset" for="register-form-no-free-shipping">
+                        No:
+                        <input class="register-form__checkbox" type="radio" id="register-form-no-free-shipping" value="no" name="freeShipment" checked>
+                    </label>
+                </fieldset>
+
+                <div class="register-form__input-wrapper">
+                    <label class="register-form__label" for="register-form-long-min-age"><sup>*</sup>Rango de Edad</label>
+                    <div class="register-form__option-list-container">
+                        <select class="register-form__select register-form__select--dropdown" id="register-form-long-min-age" name="ageRange">
+                            <option class="register-form__option register-form__option--dropdown" value="" selected>—Seleccionar—</option>
+                            <option class="register-form__option register-form__option--dropdown" value="1">0-2 años</option>
+                            <option class="register-form__option register-form__option--dropdown" value="2">3-4 años</option>
+                            <option class="register-form__option register-form__option--dropdown" value="3">5-7 años</option>
+                            <option class="register-form__option register-form__option--dropdown" value="4">8-13 años</option>
+                            <option class="register-form__option register-form__option--dropdown" value="5">+14 años</option>
+                        </select>
+                    </div>
+                    <div class="register-form__custom-validity-wrapper"></div>
+                </div>
+
+                <div class="register-form__input-wrapper register-form__input-wrapper--file-input">
+                    <label class="register-form__label register-form__label--file-input" for="register-form-photos"><sup>*</sup>Foto(s):
+                        <span class="register-form__span">4 requeridas</span>
+                    </label>
+                    <label class="input-file-button" for="register-form-photos">
+                        Seleccionar
+                        <input class="input-file-button__input" type="file" accept=".png, .jpg, .jpeg" multiple id="register-form-photos" name="photo">
+                    </label>
+                    <div class="register-form__custom-validity-wrapper"></div>
+                </div>
+
+                <p class="register-form__disclaimer"><sup>*</sup>Campos obligatorios</p>
+
+                <div class="register-form-submit-btn__container">
+                    <button class="register-form-submit-btn" type="submit" id="register-form-submit-button">Registrar</button>
+                </div>
+            </form>
+
+        </div>
+        
+    </section>
+    
+</div>
+
+<script src="../../public/js/product-register.js"></script>

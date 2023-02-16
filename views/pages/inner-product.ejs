@@ -1,0 +1,148 @@
+<div class="inner-product__container">
+    
+    <div class="inner-product__slider-container">
+        <!-- input*3[type="radio" id="image$" name="image"] -->
+        <input class="product-slider__input" type="radio" id="image1" name="show-product__image" checked>
+        <input class="product-slider__input" type="radio" id="image2" name="show-product__image">
+        <input class="product-slider__input" type="radio" id="image3" name="show-product__image">
+        <input class="product-slider__input" type="radio" id="image4" name="show-product__image">
+
+        <!-- .product-slider__container>.featured-wrapper>ul.featured-list>li*3>figure>img^^^ul.arrows>li*3>label[for="image$"]^ul.dots>label[for="image$"]^^^ul.thumb-list>li*3>label[for="image$"]>img+span.outer>span.inner{Caption$} -->
+        <div class="product-slider">
+            <div class="product-slider__big-image-wrapper">
+        
+                <ul class="product-slider__big-image-list">
+                    <li class="product-slider__big-image-container">
+                        <img class="product-slider__big-image" src="<%= toy.photos[0]%>" alt="Ocean View">
+                    </li>
+                    <li class="product-slider__big-image-container">
+                        <img class="product-slider__big-image" src="<%= toy.photos[1]%>" alt="Ocean View">
+                    </li>
+                    <li class="product-slider__big-image-container">
+                        <img class="product-slider__big-image" src="<%= toy.photos[2]%>" alt="Ocean View">
+                    </li>
+                    <li class="product-slider__big-image-container">
+                        <img class="product-slider__big-image" src="<%= toy.photos[3]%>" alt="Ocean View">
+                    </li>
+                </ul>
+        
+                <ul class="product-slider__arrows-wrapper">
+                    <li class="product-slider__arrow-container">
+                        <label class="product-slider__arrow" for="image1"></label>
+                    </li>
+                    <li class="product-slider__arrow-container">
+                        <label class="product-slider__arrow" for="image2"></label>
+                    </li>
+                    <li class="product-slider__arrow-container">
+                        <label class="product-slider__arrow" for="image3"></label>
+                    </li>
+                    <li class="product-slider__arrow-container">
+                        <label class="product-slider__arrow" for="image4"></label>
+                    </li>
+                </ul>
+        
+                <ul class="product-slider__dots-wrapper">
+                    <li class="product-slider__dot-container">
+                        <label class="product-slider__dot" for="image1"></label>
+                    </li>
+                    <li class="product-slider__dot-container">
+                        <label class="product-slider__dot" for="image2"></label>
+                    </li>
+                    <li class="product-slider__dot-container">
+                        <label class="product-slider__dot" for="image3"></label>
+                    </li>
+                    <li class="product-slider__dot-container">
+                        <label class="product-slider__dot" for="image4"></label>
+                    </li>
+                </ul>
+        
+            </div>
+        
+            <div class="product-slider__small-image-wrapper">
+                <ul class="product-slider__small-image-list">
+                    <li class="product-slider__small-image-container">
+                        <label class="product-slider__small-image-label" for="image1">
+                            <img class="product-slider__small-image" src="<%= toy.photos[0]%>" alt="Ocean View">
+                        </label>
+                    </li>
+                    <li class="product-slider__small-image-container">
+                        <label class="product-slider__small-image-label" for="image2">
+                            <img class="product-slider__small-image" src="<%= toy.photos[1]%>" alt="Ocean View">
+                        </label>
+                    </li>
+                    <li class="product-slider__small-image-container">
+                        <label class="product-slider__small-image-label" for="image3">
+                            <img class="product-slider__small-image" src="<%= toy.photos[2]%>" alt="Ocean View">
+                        </label>
+                    </li>
+                    <li class="product-slider__small-image-container">
+                        <label class="product-slider__small-image-label" for="image4">
+                            <img class="product-slider__small-image" src="<%= toy.photos[3]%>" alt="Ocean View">
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="inner-product__info-container">
+        <div class="inner-product__product-name-container">
+            <h1 class="inner-product__product-name"><%= toy.title%></h1>
+        </div>
+
+        <div class="inner-product__info">
+
+            <div class="inner-product__short-description-container">
+                <p class="inner-product__short-description"><%= toy['short-description']%></p>
+            </div>
+
+            <div class="inner-product__additional-info">
+                <div class="inner-product__rating-container">
+                    <img class="inner-product__rating" src="public/images/card__rating-<%= toy.ratingImage%>s.svg" alt="4,5 estrellas de calificación del producto" title="Rating del producto">
+                </div>
+                <p class="inner-product__price">$<%= toy.fee %></p>
+            </div>
+
+            <div class="inner-product__buying-section">
+                
+                <div class="buying-section">
+
+                    <div class="buying-section__quantity-selector">
+
+                        <button class="quantity-selector__decrease-btn" id="quantity-decrement-btn"></button>
+
+                        <!-- El atributo 'readonly' indica que el input no puede se modificado escribiendo directamente sobre él -->
+                        <input class="quantity-selector__input" id="quantity-input" type="number" min="1" max="5" step="1" value="1" name="quantity" readonly>
+
+                        <button class="quantity-selector__increase-btn" id="quantity-increment-btn"></button>
+                        
+                    </div>
+
+                    <p class="buying-section__disclaimer">max. 5</p>
+                </div>
+
+                <div class="inner-product__btn-container">
+                    <div class="buying-button-container">
+                        <a href="#" class="buying-button">Comprar</a>
+                    </div>
+                    
+                    <input class="inner-product__favorite-button-toggle-input" type="checkbox" id="inner-prodcut-favorite-button-toggle">
+                    <div class="inner-product__favorite-button-container">
+                        <label class="inner-product__favorite-button-toggle-label" for="inner-prodcut-favorite-button-toggle"></label>
+                        <button class="inner-product__favorite-button"></button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="inner-product__long-description-container">
+                <h2 class="inner-product__long-description-headline">Detalles del producto</h2>
+                <p class="inner-product__long-description-description">
+                    <%= toy['long-description']%>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="public/js/inner-product.js"></script>

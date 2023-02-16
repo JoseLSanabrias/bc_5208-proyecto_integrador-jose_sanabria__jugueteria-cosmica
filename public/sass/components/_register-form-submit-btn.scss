@@ -1,0 +1,41 @@
+
+.register-form-submit-btn{
+    width: 100%;
+    padding: 1rem 0;
+    font-weight: 600;
+    font-size: var(--headline-4);
+    border: none;
+    border-radius: 0 0 10px 10px;
+    color: #fff;
+    background-color: var(--main-purple);
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+
+    @media only screen and (min-width: 0) and (max-width: 768px){
+        font-size: var(--headline-4-mobile);
+    }
+    @media only screen and (min-width: 1200px){
+        border-radius: 10px;
+
+        &:hover{
+            background-color: var(--dark-purple);
+        }
+    }
+
+    &__container{
+        position: absolute;
+        bottom: -2.25rem;
+        left: 0;
+        right: 0;
+        
+        @media only screen and (min-width: 768px) and (max-width: 1200px){
+            bottom: -4rem;
+        }
+        @media only screen and (min-width: 1200px){
+            width: 100%; 
+            margin: 0 auto;
+            position: static;
+        }
+    }
+}

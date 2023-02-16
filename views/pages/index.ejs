@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juguetería Cósmica</title>
+    <link rel="stylesheet" href="/public/css/main.css">
+</head>
+
+<body>
+
+    <div class="screen-black-blur-filter" id="blur-filter"></div>
+    
+    <input type="checkbox" class="main-nav-toggle" id="main-nav-toggle">
+    <header class="main-header">
+        <%- include('../partials/header.ejs')%>
+    </header>
+
+    <main class="main">
+        <%- include(pagePath)  %>
+    </main>
+
+    <footer class="main-footer">
+        <%- include('../partials/footer.ejs')%>
+    </footer>
+
+    <script src="../../public/js/main.js"></script>
+
+</body>
+
+</html>

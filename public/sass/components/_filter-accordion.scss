@@ -1,0 +1,187 @@
+
+.accordion-main-header{
+    color: #fff;
+    background-color: var(--dark-purple);
+}
+
+
+/*=====================================================================================================================
+=                                                    Small Accordion                                                  =
+=====================================================================================================================*/
+
+.filter-list-accordion--small{
+
+    border-radius: 10px;
+    background-color: #fff;
+    
+    @media only screen and (min-width: 0) and (max-width: 768px){
+        width: 100%;
+    }
+
+    &__header{
+        padding: 1rem;
+        border-bottom: solid 1px var(--mid-gray);
+        border-radius: 10px 10px 0 0;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    &__item-heading{
+        font-weight: 500;
+        flex-grow: 2;
+        
+        @media only screen and (min-width: 0) and (max-width:768px){
+            font-size: var(--headline-5-mobile);
+        }
+
+        @media only screen and (min-width:768px) and (max-width: 1200px){
+            font-size: var(--headline-4);
+        }
+    }
+
+    &__item-icon--close{
+        width: 1rem;
+        height: 1rem;
+        border: none;
+        background-color: transparent;
+        background-image: url(../images/cross-icon.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        cursor: pointer;
+    }
+
+    &__item-content{
+        padding: 1rem;
+        border-bottom: solid 1px var(--mid-gray);
+        display: none;
+
+        @media only screen and (min-width: 0) and (max-width:768px){
+            font-size: var(--paragraph-mobile);
+        }
+        @media only screen and (min-width: 768px) and (max-width: 1200px){
+            font-size: 2px;
+        }
+    }
+    
+    .input--1:checked ~ .item-1 &__item-content,
+    .input--2:checked ~ .item-2 &__item-content,
+    .input--3:checked ~ .item-3 &__item-content,
+    .input--4:checked ~ .item-4 &__item-content{
+        display: block;
+    }
+
+    &__submit-btn{
+        width: 100%;
+        padding: .8rem 0;
+        font-weight: 500;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 0 0 10px 10px;
+        color: #fff;
+        background-color: var(--main-purple);
+        cursor: pointer;
+    }
+
+    &__item-icon--down{
+        cursor: pointer;
+        transition: transform .2s;
+    }
+
+    &__toggle-input{
+        display: none;
+    }
+
+    .input--1:checked ~ .item-1 &__item-icon--down,
+    .input--2:checked ~ .item-2 &__item-icon--down,
+    .input--3:checked ~ .item-3 &__item-icon--down,
+    .input--4:checked ~ .item-4 &__item-icon--down{
+        transform: rotate(180deg);
+    }
+
+    &__toggle-label{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        cursor: pointer;
+        z-index: 3;
+    }
+}
+
+/*============================================  End of Small Accordion  =============================================*/
+
+
+
+
+
+/*=====================================================================================================================
+=                                                    Wide Accordion                                                  =
+=====================================================================================================================*/
+
+.filter-list-accordion{
+    
+    width: 100%;
+    border: solid 1.25px var(--mid-gray);
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 20px -5px hsla(0, 0%, 0%, .1);
+
+    &__header{
+        padding: 1rem;
+        border-bottom: solid 1px var(--mid-gray);
+        border-radius: 10px 10px 0 0;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    &__item-heading{
+        font-weight: 500;
+        flex-grow: 2;
+        font-size: var(--headline-5);
+    }
+
+    &__item-content{
+        padding: 1rem;
+        border-bottom: solid 1px var(--mid-gray);
+        display: none;
+    }
+
+    .wide-input--1:checked ~ .wide-item-1 &__item-content,
+    .wide-input--2:checked ~ .wide-item-2 &__item-content,
+    .wide-input--3:checked ~ .wide-item-3 &__item-content,
+    .wide-input--4:checked ~ .wide-item-4 &__item-content{
+        display: block;
+    }
+
+    &__item-icon--down{
+        cursor: pointer;
+        transition: transform .2s;
+    }
+
+    &__toggle-input{
+        display: none;
+    }
+
+    .wide-input--1:checked ~ .wide-item-1 &__item-icon--down,
+    .wide-input--2:checked ~ .wide-item-2 &__item-icon--down,
+    .wide-input--3:checked ~ .wide-item-3 &__item-icon--down,
+    .wide-input--4:checked ~ .wide-item-4 &__item-icon--down{
+        transform: rotate(180deg);
+    }
+
+    &__toggle-label{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        cursor: pointer;
+        z-index: 3;
+    }
+}
+
+/*============================================  End of Wide Accordion  =============================================*/

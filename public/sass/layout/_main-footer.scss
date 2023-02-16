@@ -1,0 +1,177 @@
+
+.main-footer{
+    width: 100%;
+    background-color: var(--main-yellow);
+    margin-top: -15px;
+    
+    &__container{
+        max-width: 1680px;
+        min-width: 320px;
+        margin: 0 auto;
+        padding: 1rem 0;
+        padding-bottom: 2.5rem;
+        display: flex;
+        flex-direction: row;
+        
+        @media only screen and (min-width: 0) and (max-width: 768px){
+            padding: 2.5rem 0;
+            flex-direction: column;
+            align-items: center;
+        }
+        @media only screen and (min-width: 768px) and (max-width: 1200px){
+            flex-direction: column;
+        }
+        @media only screen and (min-width: 1200px){
+            padding: 4rem 2.5rem;
+            align-items: center;
+        }
+    }
+    
+    &__logo-container{
+        padding: 1rem;
+        border-bottom: solid 4px #fff;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        
+        @media only screen and (min-width: 0) and (max-width: 768px){
+            width: 85%;
+            margin: 0 auto 2.5rem;
+            justify-content: space-between;
+            gap: 1.5rem;
+        }
+        @media only screen and (min-width: 768px) and (max-width: 1200px){
+            width: 90%;
+            margin-bottom: 3.5rem;
+            justify-content: space-around;
+        }
+        @media only screen and (min-width: 1200px){
+            padding-right: 2.5rem;
+            border: none;
+            flex-direction: column;
+            gap: 3.5rem;
+        }
+    }
+
+    &__logo{
+        @media only screen and (min-width: 0) and (max-width: 768px){
+            flex-grow: 1;
+            max-width: 12rem;
+        }
+    }
+
+    &__copyright{
+        color: #fff;
+        font-size: var(--headline-5);
+        font-weight: 900;
+    }
+
+    &__wrapper-1{
+        width: 100%;
+
+        @media only screen and (min-width: 1200px){
+            flex-grow: 2;
+            border-left: 2px solid #fff;
+            border-right: 2px solid #fff;
+            padding: 0 1.5rem;
+        }
+    }
+
+    &__newsletter-form-container{
+        margin: 0 auto;
+        @media only screen and (min-width: 0) and (max-width: 768px){
+            width: 85%;
+        }
+        @media only screen and (min-width: 768px) and (max-width: 1200px){
+            width: 90%;
+            margin-bottom: 3.5rem;
+        }
+    }
+    
+    &__nav-container{
+        border-top: 2px solid #fff;
+        width: 100%;
+        margin-bottom: 2.5rem;
+
+        @media only screen and (min-width: 1200px){
+            margin-top: 3.5rem;
+            margin-bottom: 0;
+            border-top: none;
+        }
+    }
+
+    &__wrapper-2{
+        width: 100%;
+
+        @media only screen and (min-width: 1200px){
+            padding: 0 2.5rem;
+            flex-grow: 2;
+        }
+    }
+
+    &__social-container{
+        margin: 0 auto 2.5rem;
+        display: flex;
+
+        @media only screen and (min-width: 0) and (max-width: 768px){
+            width: 85%;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        @media only screen and (min-width: 768px) and (max-width: 1200px){
+            width: 70%;
+            margin-bottom: 3.5rem;
+            align-items: center;
+        }
+
+        @media only screen and (min-width: 1200px){
+            width: 100%;
+            justify-content: space-between;
+        }
+        
+    }
+
+    &__social-headline{
+        color: #fff;
+        font-weight: 800;
+        font-size: var(--headline-2-mobile);
+        flex-grow: 1;
+    }
+
+    &__social-icon-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 1;
+
+        @media only screen and (min-width: 0) and (max-width: 768px){
+            width: 90%;
+        }
+    }
+
+    &__social-link{
+        @media only screen and (min-width: 1200px){
+            &:hover{
+                filter: drop-shadow(0 7px 4px hsla(0, 0%, 0%, .25));
+            }
+        }
+    }
+
+    &__disclaimer-container{
+        width: 85%;
+        margin: 0 auto;
+
+        @media only screen and (min-width: 1200px){
+            width: 100%;
+        }
+    }
+
+    &__disclaimer{
+        color: #fff;
+        font-size: var(--paragraph);
+
+        @media only screen and (min-width: 0) and (max-width: 768px){
+            font-size: var(--paragraph-mobile);
+        }
+    }
+}

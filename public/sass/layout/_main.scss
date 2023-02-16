@@ -1,0 +1,21 @@
+
+.main{
+    width: 80%;
+    max-width: 1680px;
+    padding: 1rem;
+    margin: 0 auto;
+    overflow: hidden;
+    
+    @media only screen and (min-width: 0) and (max-width: 768px){
+        width: 100%;
+        padding: 0;
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1200px){
+        width: 100%;
+        padding: 2rem;
+    }
+    @media only screen and (min-width: 1200px){
+        overflow: visible;
+        padding-top: 0;
+    }
+}

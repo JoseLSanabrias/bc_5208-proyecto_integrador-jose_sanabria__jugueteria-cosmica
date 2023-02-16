@@ -1,0 +1,28 @@
+.buying-section{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    @media only screen and (min-width: 768px) and (max-width: 1200px){
+        margin: 0 auto;
+        width: 65%;
+    }
+
+    
+    &__quantity-selector{
+        border: solid 1px #d9d9d9;
+        border-radius: 2px;
+        flex-basis: 70%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    
+    &__disclaimer{
+        font-size: var(--headline-4-mobile);
+
+        @media only screen and (min-width: 0) and (max-width: 768px) {
+            font-size: var(--paragraph-mobile);
+        }
+    }
+}
