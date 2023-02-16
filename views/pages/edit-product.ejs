@@ -1,0 +1,140 @@
+
+<div class="register-wrapper">
+
+    <div class="main__current-page-container">
+
+        <div class="current-page__icon-container">
+            <img class="current-page__icon" src="../public/images/register-icon--wh.svg" alt="Imagen vectorizada de un hoja de registro">
+        </div>
+
+        <div class="current-page__heading-wrapper">
+            <h2 class="current-page__heading">Alta</h2>
+        </div>
+
+    </div>
+
+    <div class="main__whats-app-button-container">
+        <a class="whats-app-button__link" href="http://wa.me/+573332224444"  target="_blank"></a>
+    </div>
+
+    <section class="section-edit-form">
+
+        <div class="section-edit-form__bg-image"></div>
+
+        <div class="edit-form-container">
+
+            <header class="edit-form__header">
+                <div class="edit-form__header-image-container">
+                    <img class="edit-form__header-image" src="../public/images/edit-form__header-image.jpg" alt="Fotografía de estantes de juguetería">
+                </div>
+            </header>
+
+            <form class="edit-form" action="/product-register/new" method="post" enctype="multipart/form-data" autocomplete="off">
+
+                <div class="edit-form__heading-container">
+                    <h2 class="edit-form__heading">Registrar Producto</h2>
+                </div>
+
+                <div class="edit-form__input-wrapper">
+                    <label class="edit-form__label" for="edit-form-name-input"><sup>*</sup>Nombre:</label>
+                    <input autofocus class="edit-form__input" type="text" id="edit-form-name-input" name="title" placeholder="Nuevo juguete">
+                    <div class="edit-form__custom-validity-wrapper"></div>
+                </div>
+
+                <div class="edit-form__input-wrapper">
+                    <label class="edit-form__label" for="edit-form-price-input"><sup>*</sup>Precio:</label>
+                    <input class="edit-form__input edit-form__input--price" type="text" id="edit-form-price-input" name="fee" placeholder="$ 0,000,000 COP">
+                    <div class="edit-form__custom-validity-wrapper"></div>
+                </div>
+
+                <div class="edit-form__input-wrapper">
+                    <label class="edit-form__label" for="edit-form-stock-input"><sup>*</sup>Stock:</label>
+                    <input class="edit-form__input" type="text" id="edit-form-stock-input" name="stock" placeholder="Unidades disponibles">
+                    <div class="edit-form__custom-validity-wrapper"></div>
+                </div>
+
+                <div class="edit-form__input-wrapper">
+                    <label class="edit-form__label" for="edit-form-brand-input"><sup>*</sup>Marca:</label>
+                    <input class="edit-form__input" type="text" id="edit-form-brand-input" name="brand" placeholder="Marca del juguete">
+                    <div class="edit-form__custom-validity-wrapper"></div>
+                </div>
+
+                <div class="edit-form__input-wrapper">
+                    <label class="edit-form__label" for="edit-form-category-input"><sup>*</sup>Categoría:</label>
+                    <select class="edit-form__select edit-form__select--multiple" id="edit-form-category-input" name="category" size="3" multiple>
+                        <option class="edit-form__option" value="" selected>—Seleccionar—</option>
+                        <option class="edit-form__option" value="1">Bebés y Pre-escolar</option>
+                        <option class="edit-form__option" value="2">Coleccionables</option>
+                        <option class="edit-form__option" value="3">Figuras de acción</option>
+                        <option class="edit-form__option" value="4">Muñecas</option>
+                        <option class="edit-form__option" value="5">Sets de bloques y construcción</option>
+                    </select>
+                    <div class="edit-form__custom-validity-wrapper"></div>
+                </div>
+
+                <div class="edit-form__input-wrapper">
+                    <label class="edit-form__label" for="edit-form-short-description"><sup>*</sup>Descripción corta:</label>
+                    <textarea class="edit-form__textarea edit-form__textarea--short" id="edit-form-short-description" name="short-description" placeholder="Max. 65 caracteres"></textarea>
+                    <div class="edit-form__custom-validity-wrapper"></div>
+                </div>
+
+                <div class="edit-form__input-wrapper edit-form__input-wrapper--textarea-long">
+                    <label class="edit-form__label" for="edit-form-long-description"><sup>*</sup>Descripción larga:</label>
+                    <textarea class="edit-form__textarea edit-form__textarea--long" id="edit-form-long-description" name="long-description" placeholder="Max. 290 caracteres"></textarea>
+                    <div class="edit-form__custom-validity-wrapper"></div>
+                </div>
+
+                <fieldset class="edit-form__fieldset">
+                    <legend class="edit-form__legend">Envío sin cargo:</legend>
+                    
+                    <label class="edit-form__label edit-form__label--fieldset" for="edit-form-free-shipping">
+                        Si:
+                        <input class="edit-form__checkbox" type="radio" id="edit-form-free-shipping" value="yes" name="freeShipment">
+                    </label>
+
+                    <label class="edit-form__label edit-form__label--fieldset" for="edit-form-no-free-shipping">
+                        No:
+                        <input class="edit-form__checkbox" type="radio" id="edit-form-no-free-shipping" value="no" name="freeShipment" checked>
+                    </label>
+                </fieldset>
+
+                <div class="edit-form__input-wrapper">
+                    <label class="edit-form__label" for="edit-form-long-min-age"><sup>*</sup>Rango de Edad</label>
+                    <div class="edit-form__option-list-container">
+                        <select class="edit-form__select edit-form__select--dropdown" id="edit-form-long-min-age" name="ageRange">
+                            <option class="edit-form__option edit-form__option--dropdown" value="" selected>—Seleccionar—</option>
+                            <option class="edit-form__option edit-form__option--dropdown" value="1">0-2 años</option>
+                            <option class="edit-form__option edit-form__option--dropdown" value="2">3-4 años</option>
+                            <option class="edit-form__option edit-form__option--dropdown" value="3">5-7 años</option>
+                            <option class="edit-form__option edit-form__option--dropdown" value="4">8-13 años</option>
+                            <option class="edit-form__option edit-form__option--dropdown" value="5">+14 años</option>
+                        </select>
+                    </div>
+                    <div class="edit-form__custom-validity-wrapper"></div>
+                </div>
+
+                <div class="edit-form__input-wrapper edit-form__input-wrapper--file-input">
+                    <label class="edit-form__label edit-form__label--file-input" for="edit-form-photos"><sup>*</sup>Foto(s):
+                        <span class="edit-form__span">4 requeridas</span>
+                    </label>
+                    <label class="input-file-button" for="edit-form-photos">
+                        Seleccionar
+                        <input class="input-file-button__input" type="file" accept=".png, .jpg, .jpeg" multiple id="edit-form-photos" name="photo">
+                    </label>
+                    <div class="edit-form__custom-validity-wrapper"></div>
+                </div>
+
+                <p class="edit-form__disclaimer"><sup>*</sup>Campos obligatorios</p>
+
+                <div class="edit-form-submit-btn__container">
+                    <button class="edit-form-submit-btn" type="submit" id="edit-form-submit-button">Registrar</button>
+                </div>
+            </form>
+
+        </div>
+        
+    </section>
+    
+</div>
+
+<script src="../../public/js/product-register.js"></script>
