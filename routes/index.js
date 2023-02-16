@@ -14,6 +14,7 @@ const favRoutes = require('./favorites.routes');
 const contactRoutes = require('./contact.routes');
 const aboutUsRoutes = require('./about.routes');
 const innerProducts = require('./inner.product.routes');
+const modifyProduct = require('./modify.product.routes');
 
 /*============================================  End of Requerir rutas  =============================================*/
 
@@ -32,9 +33,11 @@ router.use('/contact', contactRoutes);
 // About routes
 router.use('/about-us', aboutUsRoutes);
 
-// About routes
+// Inner product routes
 router.use('/', innerProducts);
 
+// Delete product route
+router.use('/', modifyProduct);
 
 
 

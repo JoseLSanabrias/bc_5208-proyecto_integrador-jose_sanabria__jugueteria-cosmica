@@ -32,6 +32,15 @@
             margin: 0;
         }
     }
+
+    &__crud-btn-container{
+        width: 50%;
+        margin: 2rem 7rem 0 0;
+        float: right;
+        display: flex;
+        gap: 13px;
+        justify-content: flex-end;
+    }
     
     
     &__info-container{

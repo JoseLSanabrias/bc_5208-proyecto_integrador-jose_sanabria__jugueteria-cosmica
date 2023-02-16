@@ -82,6 +82,20 @@
                     </li>
                 </ul>
             </div>
+
+        </div>
+        <div class="inner-product__crud-btn-container">
+            <form action="/<%= toy._id %>?_method=PUT" method="POST" class="inner-product__edit">
+                <button type="submit" class="inner-product__edit-btn">
+                    <img src="/public/images/inner-product__edit-btn-icon.svg" alt="Ícono vector de lápiz">
+                </button>
+            </form>
+
+            <form action="/<%= toy._id %>?_method=DELETE" method="POST" class="inner-product__delete">
+                <button type="submit" class="inner-product__delete-btn">
+                    <img src="/public/images/inner-product__delete-btn-icon.svg" alt="Ícono vector de basurero">
+                </button>
+            </form>
         </div>
     </div>
 
@@ -98,7 +112,7 @@
 
             <div class="inner-product__additional-info">
                 <div class="inner-product__rating-container">
-                    <img class="inner-product__rating" src="public/images/card__rating-<%= toy.ratingImage%>s.svg" alt="4,5 estrellas de calificación del producto" title="Rating del producto">
+                    <img class="inner-product__rating" src="public/images/card__rating-<%= toy.ratingImage%>s.svg" alt="<%= toy.rating%> estrellas de calificación del producto" title="<%= toy.rating%> estrellas de rating del producto">
                 </div>
                 <p class="inner-product__price">$<%= toy.fee %></p>
             </div>

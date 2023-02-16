@@ -49,6 +49,8 @@
 @use 'components/contact-form-submit-btn';
 @use 'components/buying-button';
 @use 'components/quantity-selector';
+@use 'components/delete-product-btn';
+@use 'components/edit-product-btn';
 
 //  pages
 @use 'pages/index';

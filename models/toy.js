@@ -45,15 +45,15 @@ const toySchema = new mongoose.Schema({
         type: Number,
         required: true,
     },
-    'stock':{
+    stock:{
         type: Number,
         required: true,
     },
-    'brand': {
+    brand: {
         type: String,
         required: true,
     },
-    'category': {
+    category: {
         type: String,
         required: true,
     },
@@ -77,9 +77,13 @@ const toySchema = new mongoose.Schema({
         type: String,
         required: false,
     },
-    'photos':{
+    photos:{
         type: [String],
         required: true,
+    },
+    cloudinary_ids:{
+        type: [String],
+        required: false,
     },
     rating: {
         type: Number,

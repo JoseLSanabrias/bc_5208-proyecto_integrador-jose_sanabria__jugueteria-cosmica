@@ -580,13 +580,14 @@
 
     </div>
 
+
     <div class="cards-container">
 
     <% toys.forEach(toy => { %>
         <div class="card">
-            <input class="card__favorite-button-toggle-input" type="checkbox" id="card-favorite-button-toggle-1">
+            <input class="card__favorite-button-toggle-input" type="checkbox" id="<%=toy.title %>">
             <div class="card__favorite-button-container">
-                <label class="card__favorite-button-toggle-label" for="card-favorite-button-toggle-1"></label>
+                <label class="card__favorite-button-toggle-label" for="<%=toy.title %>"></label>
                 <button class="card__favorite-button"></button>
             </div>
             <div class="card__inner-border">

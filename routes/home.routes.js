@@ -19,8 +19,8 @@ const router = express.Router();
 
 const pagePath = `../pages/home.ejs`;
 
-/* Obtención Data
-------------------------------------------------------------------------------------------------------------------- */
+
+// Obtención juguete de base de datos
 router.get('/', async(req, res) => {
     const toys = await Toy.find().sort({
         createAt: 'desc',
@@ -31,8 +31,6 @@ router.get('/', async(req, res) => {
     });
 });
 
-/* End of Obtención Data
-------------------------------------------------------------------------------------------------------------------- */
 
 
 
