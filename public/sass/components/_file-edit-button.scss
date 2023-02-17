@@ -1,0 +1,73 @@
+
+.edit-file-button{
+    padding: .5rem;
+    text-align: center;
+    font-size: var(--headline-4);
+    font-weight: 600;
+    border: solid 2px var(--main-green);
+    border-radius: 5px;
+    color:var(--main-green);
+    display: block;
+    cursor: pointer;
+    flex-grow: 2;
+    z-index: 2;
+
+
+    @media only screen and (min-width: 0) and (max-width: 768px){
+        font-size: var(--headline-5);
+        background-color: #fff;
+        bottom: 10px;
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1200px){
+        background-color: #fff;
+        position: static;
+    }
+    @media only screen and (min-width: 1200px){
+        min-width: 300px;
+        padding: .5rem 1rem;
+        text-decoration: none;
+        text-align: center;
+        border: solid 2px var(--main-green);
+        border-radius: 5px;
+        background-color: transparent;
+        position: relative;
+        overflow: hidden;
+        display: block;
+
+    &::after{
+            content: "";
+            width: 2rem;
+            height: 100%;
+            background-color: var(--main-green);
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: .2s ease-in-out;
+
+        }
+        
+        &:hover{
+            color: #fff;
+            // background-color: var(--main-green);
+
+            &::after{
+                width: 100%;
+                right: 0;
+                z-index: -1;
+                transition: .2s;
+            }
+        }
+    }
+
+    &:active{
+        color: #fff;
+        background-color: var(--dark-green);
+        &::after{
+            width: 0;
+        }
+    }
+
+    &__input{
+        display: none;
+    }
+}

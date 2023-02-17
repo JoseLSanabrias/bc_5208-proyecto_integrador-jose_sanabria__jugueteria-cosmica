@@ -17,6 +17,7 @@ const cloudinary = require('../utils/cloudinary');
 
 /*===================================  End of Requerir dependencias instaladas  ====================================*/
 
+//  Configuracion del verbo DELETE
 router.delete('/:id', async (req, res) => {
     try {
         let toy = await Toy.findById(req.params.id);;
@@ -28,6 +29,23 @@ router.delete('/:id', async (req, res) => {
         await toy.remove();
 
         res.redirect('/home');
+
+    } catch (error) {
+    console.log(error.message);
+    }
+});
+
+const pagePath = `../pages/edit-product`;
+
+//  Configuracion del verbo PUT
+router.put('/:id', async(req, res) => {
+    try {
+        let toy = await Toy.findById(req.params.id);;
+        
+        res.render('pages/index', { 
+            toy: toy,
+            pagePath: pagePath,
+        });
 
     } catch (error) {
     console.log(error.message);

@@ -32,6 +32,7 @@
 @use 'layout/parallax-effect';
 @use 'layout/product-slider';
 @use 'layout/buying-section';
+@use 'layout/edit-form-section';
 
 //  components
 @use 'components/hamburger-button.scss';
@@ -51,6 +52,9 @@
 @use 'components/quantity-selector';
 @use 'components/delete-product-btn';
 @use 'components/edit-product-btn';
+@use 'components/edit-form';
+@use 'components/edit-form-submit-btn';
+@use 'components/file-edit-button';
 
 //  pages
 @use 'pages/index';
@@ -59,6 +63,7 @@
 @use 'pages/contact';
 @use 'pages/about-us';
 @use 'pages/inner-product';
+@use 'pages/product-edit';
 
 //  themes
 

@@ -95,6 +95,22 @@
         }
     }
 
+    &__free-shipment{
+        width: fit-content;
+        margin-top: 0.5rem;
+        padding: 0.5rem 2rem;
+        font-size: .6em;
+        color: #f2f2f2;
+        display: block;
+        border-radius: 5px;
+        background-color: var(--light-green);
+        background-image: url(../images/star.svg);
+        background-repeat: no-repeat;
+        background-size: 10%;
+        background-position: 10px center ;
+        
+    }
+
     
     &__info{
         padding: 0 2rem;

@@ -1,5 +1,5 @@
 
-<div class="register-wrapper">
+<div class="edit-wrapper">
 
     <div class="main__current-page-container">
 
@@ -8,7 +8,7 @@
         </div>
 
         <div class="current-page__heading-wrapper">
-            <h2 class="current-page__heading">Alta</h2>
+            <h2 class="current-page__heading">Editar</h2>
         </div>
 
     </div>
@@ -25,37 +25,37 @@
 
             <header class="edit-form__header">
                 <div class="edit-form__header-image-container">
-                    <img class="edit-form__header-image" src="../public/images/edit-form__header-image.jpg" alt="Fotografía de estantes de juguetería">
+                    <img class="edit-form__header-image" src="../public/images/edit-form__header-image.jpg" alt="Fotografía de maqueta sistema solar">
                 </div>
             </header>
 
-            <form class="edit-form" action="/product-register/new" method="post" enctype="multipart/form-data" autocomplete="off">
+            <form class="edit-form" action="/product-register/new" method="post" enctype="multipart/form-data" autocomplete="on">
 
                 <div class="edit-form__heading-container">
-                    <h2 class="edit-form__heading">Registrar Producto</h2>
+                    <h2 class="edit-form__heading">Editar Producto</h2>
                 </div>
 
                 <div class="edit-form__input-wrapper">
                     <label class="edit-form__label" for="edit-form-name-input"><sup>*</sup>Nombre:</label>
-                    <input autofocus class="edit-form__input" type="text" id="edit-form-name-input" name="title" placeholder="Nuevo juguete">
+                    <input autofocus class="edit-form__input" type="text" id="edit-form-name-input" name="title" placeholder="Nuevo juguete" value="<%= toy.title %>">
                     <div class="edit-form__custom-validity-wrapper"></div>
                 </div>
 
                 <div class="edit-form__input-wrapper">
                     <label class="edit-form__label" for="edit-form-price-input"><sup>*</sup>Precio:</label>
-                    <input class="edit-form__input edit-form__input--price" type="text" id="edit-form-price-input" name="fee" placeholder="$ 0,000,000 COP">
+                    <input class="edit-form__input edit-form__input--price" type="text" id="edit-form-price-input" name="fee" placeholder="$ 0,000,000 COP" value="<%= toy.fee %>">
                     <div class="edit-form__custom-validity-wrapper"></div>
                 </div>
 
                 <div class="edit-form__input-wrapper">
                     <label class="edit-form__label" for="edit-form-stock-input"><sup>*</sup>Stock:</label>
-                    <input class="edit-form__input" type="text" id="edit-form-stock-input" name="stock" placeholder="Unidades disponibles">
+                    <input class="edit-form__input" type="text" id="edit-form-stock-input" name="stock" placeholder="Unidades disponibles" value="<%= toy.stock %>">
                     <div class="edit-form__custom-validity-wrapper"></div>
                 </div>
 
                 <div class="edit-form__input-wrapper">
                     <label class="edit-form__label" for="edit-form-brand-input"><sup>*</sup>Marca:</label>
-                    <input class="edit-form__input" type="text" id="edit-form-brand-input" name="brand" placeholder="Marca del juguete">
+                    <input class="edit-form__input" type="text" id="edit-form-brand-input" name="brand" placeholder="Marca del juguete" value="<%= toy.brand %>">
                     <div class="edit-form__custom-validity-wrapper"></div>
                 </div>
 
@@ -74,13 +74,13 @@
 
                 <div class="edit-form__input-wrapper">
                     <label class="edit-form__label" for="edit-form-short-description"><sup>*</sup>Descripción corta:</label>
-                    <textarea class="edit-form__textarea edit-form__textarea--short" id="edit-form-short-description" name="short-description" placeholder="Max. 65 caracteres"></textarea>
+                    <textarea class="edit-form__textarea edit-form__textarea--short" id="edit-form-short-description" name="short-description" placeholder="Max. 65 caracteres"><%= toy['short-description'] %></textarea>
                     <div class="edit-form__custom-validity-wrapper"></div>
                 </div>
 
                 <div class="edit-form__input-wrapper edit-form__input-wrapper--textarea-long">
                     <label class="edit-form__label" for="edit-form-long-description"><sup>*</sup>Descripción larga:</label>
-                    <textarea class="edit-form__textarea edit-form__textarea--long" id="edit-form-long-description" name="long-description" placeholder="Max. 290 caracteres"></textarea>
+                    <textarea class="edit-form__textarea edit-form__textarea--long" id="edit-form-long-description" name="long-description" placeholder="Max. 290 caracteres"><%= toy['long-description'] %></textarea>
                     <div class="edit-form__custom-validity-wrapper"></div>
                 </div>
 
@@ -117,9 +117,9 @@
                     <label class="edit-form__label edit-form__label--file-input" for="edit-form-photos"><sup>*</sup>Foto(s):
                         <span class="edit-form__span">4 requeridas</span>
                     </label>
-                    <label class="input-file-button" for="edit-form-photos">
+                    <label class="edit-file-button" for="edit-form-photos">
                         Seleccionar
-                        <input class="input-file-button__input" type="file" accept=".png, .jpg, .jpeg" multiple id="edit-form-photos" name="photo">
+                        <input class="edit-file-button__input" type="file" accept=".png, .jpg, .jpeg" multiple id="edit-form-photos" name="photo">
                     </label>
                     <div class="edit-form__custom-validity-wrapper"></div>
                 </div>
@@ -127,7 +127,7 @@
                 <p class="edit-form__disclaimer"><sup>*</sup>Campos obligatorios</p>
 
                 <div class="edit-form-submit-btn__container">
-                    <button class="edit-form-submit-btn" type="submit" id="edit-form-submit-button">Registrar</button>
+                    <button class="edit-form-submit-btn" type="submit" id="edit-form-submit-button">Editar</button>
                 </div>
             </form>
 
@@ -137,4 +137,4 @@
     
 </div>
 
-<script src="../../public/js/product-register.js"></script>
+<script src="../../public/js/product-edit.js"></script>

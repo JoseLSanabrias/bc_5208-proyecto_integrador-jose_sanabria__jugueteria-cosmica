@@ -101,7 +101,12 @@
 
     <div class="inner-product__info-container">
         <div class="inner-product__product-name-container">
-            <h1 class="inner-product__product-name"><%= toy.title%></h1>
+            <h1 class="inner-product__product-name">
+                <%= toy.title%>
+                <% if(toy.freeShipment){  %>
+                    <span class="inner-product__free-shipment"> ¡Envío gratis!</span>
+                <% } %>
+            </h1>
         </div>
 
         <div class="inner-product__info">

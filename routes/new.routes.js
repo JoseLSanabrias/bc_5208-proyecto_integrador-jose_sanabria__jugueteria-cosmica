@@ -66,7 +66,7 @@ router.post('/new', upload.array('photo', 4), async (req, res) => {
 
         // Guardar articulo en MongoDB
         await toy.save();
-        res.redirect('/home');
+        res.redirect('/');
 
     } catch (error) {
         console.log(error.message);
