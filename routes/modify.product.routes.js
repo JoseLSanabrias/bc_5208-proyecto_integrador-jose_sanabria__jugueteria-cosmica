@@ -4,6 +4,7 @@
 
 /* Express */
 const express = require('express');
+const toy = require('../models/toy');
 
 /* Modelo de objeto */
 const Toy = require('../models/toy');
@@ -16,6 +17,35 @@ const cloudinary = require('../utils/cloudinary');
 
 
 /*===================================  End of Requerir dependencias instaladas  ====================================*/
+
+const pagePath = `../pages/edit-product`;
+
+router.get('/:id', async(req, res) => {
+    const toy = await Toy.findOne({ id: req.params.id });
+    
+    res.render('pages/index', {
+        pagePath:pagePath,
+        toy: toy,
+    })
+})
+
+//  Configuracion del verbo PUT
+router.put('/:id', async(req, res) => {
+    try {
+        let toy = await Toy.findById(req.params.id);;
+        
+        res.render('pages/index', { 
+            toy: toy,
+            pagePath: pagePath,
+        });
+
+    } catch (error) {
+    console.log(error.message);
+    }
+});
+
+module.exports = router;
+
 
 //  Configuracion del verbo DELETE
 router.delete('/:id', async (req, res) => {
@@ -34,24 +64,3 @@ router.delete('/:id', async (req, res) => {
     console.log(error.message);
     }
 });
-
-
-
-const pagePath = `../pages/edit-product`;
-
-//  Configuracion del verbo PUT
-router.put('/:id', async(req, res) => {
-    try {
-        let toy = await Toy.findById(req.params.id);;
-        
-        res.render('pages/index', { 
-            toy: toy,
-            pagePath: pagePath,
-        });
-
-    } catch (error) {
-    console.log(error.message);
-    }
-});
-
-module.exports = router;
