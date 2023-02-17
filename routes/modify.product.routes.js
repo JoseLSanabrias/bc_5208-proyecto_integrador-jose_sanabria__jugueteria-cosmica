@@ -35,6 +35,8 @@ router.delete('/:id', async (req, res) => {
     }
 });
 
+
+
 const pagePath = `../pages/edit-product`;
 
 //  Configuracion del verbo PUT
